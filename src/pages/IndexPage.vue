@@ -2,7 +2,7 @@
   <q-page class="column items-center justify-center">
 
     <div class="home-search">
-      <input type="text" class="home-search-input" placeholder="Pesquise o evento" />
+      <input type="text" class="home-search-input" placeholder="Pesquise o evento por nome, categoria, local..." />
       <i class="home-search-icon material-icons">search</i>
     </div>
 
@@ -24,12 +24,11 @@ export default defineComponent({
   name: 'IndexPage',
   setup() {
     const categories = ref([
-      { name: 'Categoria 1' },
-      { name: 'Categoria 2' },
-      { name: 'Categoria 3' },
-      { name: 'Categoria 4' },
-      { name: 'Categoria 5' },
-      // Adicione mais categorias conforme necessário
+      { name: 'Shows' },
+      { name: 'Baladas' },
+      { name: 'Discoteca' },
+      { name: 'Open bar' },
+      { name: 'Raves' }
     ]);
 
     return {

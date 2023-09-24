@@ -44,6 +44,21 @@
   transform: scale(1.1);
 }
 
+.main-header-home-link {
+  background-color: white;
+  text-decoration: none;
+  color: #091c3e;
+  display: inline-block;
+  padding: 5px 20px;
+  border-radius: 25px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  transition: transform 0.3s;
+}
+.main-header-home-link:hover {
+  transform: scale(1.1);
+}
+
 .main-header-separator {
   width: 1px;
   height: 20px;
@@ -68,6 +83,8 @@
   font-family: 'Poppins', sans-serif;
 }
 
+/* HOME PAGE */
+
 .home-search {
   display: flex;
   align-items: center;
@@ -75,6 +92,7 @@
   border-bottom: 1px solid white;
   padding: 5px;
   width: 620px;
+  margin: 10px;
 }
 
 .home-search-input {
@@ -135,14 +153,16 @@
   font-family: 'Poppins', sans-serif;
 }
 
-.signing-container {
-  background-image: url('../assets/signing-image.jpg');
+/* SIGNIN PAGE */
+
+.signin-container {
+  background-image: url('../assets/signin-background-image.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #1c1740;
 }
 
-.signing-card-title {
+.signin-card-title {
   color: #ffffff;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
@@ -150,25 +170,25 @@
   margin: 0;
 }
 
-.signing-card {
+.signin-card {
   background-color: #ffffff;
   border-radius: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 380px;
-  height: 530px;
+  width: 450px;
+  height: 560px;
   margin-bottom: 40px;
   padding: 20px;
 }
 
-.signing-form {
+.signin-form {
   padding-top: 20px; /* Espaçamento entre campos */
 }
 
-.signing-form-group {
+.signin-form-group {
   margin-bottom: 10px; /* Espaçamento entre campos */
 }
 
-.signing-form-label {
+.signin-form-label {
   color: #6c6c6c;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
@@ -176,12 +196,7 @@
   margin-bottom: 5px; /* Espaçamento entre label e campo */
 }
 
-.is-required {
-  color: #c80000;
-  font-family: 'Poppins', sans-serif;
-}
-
-.signing-form-input {
+.signin-form-input {
   width: 100%;
   background-color: transparent;
   border: 2px solid #ccc; /* Cor da borda */
@@ -191,7 +206,7 @@
   font-family: 'Poppins', sans-serif;
 }
 
-.signing-form-button-container {
+.signin-form-button-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -199,50 +214,174 @@
   margin-top: 18px;
 }
 
-.signing-form-button {
+.signin-form-button {
   border: none;
   color: white;
   background: linear-gradient(135deg, #ff0084, #ff9c00);
   border-radius: 15px;
   padding: 7px;
   font-family: 'Poppins', sans-serif;
+  transition: transform 0.3s;
+}
+
+.signin-form-button:hover {
+  transform: scale(1.1);
+}
+
+/* login PAGE */
+
+.login-container {
+  background-image: url('../assets/login-background-image.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #002d5e;
+}
+
+.login-card-title {
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.login-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 450px;
+  /* height: 530px; */
+  margin-bottom: 40px;
+  padding: 20px 20px 40px 20px;
+}
+
+.login-form {
+  padding-top: 0px; /* Espaçamento entre campos */
+}
+
+.login-form-group {
+  margin-bottom: 10px; /* Espaçamento entre campos */
+}
+
+.login-header-image {
+  margin-left: 10px;
+  height: 70px;
+  vertical-align: middle;
+  transition: transform 0.3s;
+  margin-bottom: 20px;
+}
+.login-header-image:hover {
+  transform: scale(1.1);
+}
+
+.login-form-label {
+  color: #6c6c6c;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  display: block; /* Para que as labels apareçam embaixo dos campos */
+  margin-bottom: 5px; /* Espaçamento entre label e campo */
+}
+
+.login-form-input {
+  width: 100%;
+  background-color: transparent;
+  border: 2px solid #ccc; /* Cor da borda */
+  border-radius: 15px 15px 15px 15px;
+  padding: 6px; /* Espaçamento interno do campo */
+  font-size: 13px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.login-form-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+.login-form-button {
+  border: none;
+  color: white;
+  background: linear-gradient(135deg, #ff0084, #00d9ff);
+  border-radius: 15px;
+  padding: 8px 30px 8px 30px;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 15px;
+  transition: transform 0.3s;
+}
+.login-form-button:hover {
+  transform: scale(1.1);
+}
+
+.generic-link {
+  text-decoration: none;
+  color: #757575;
+  margin-top: 15px;
+  transition: transform 0.3s;
+  display: flex;
+  justify-content: center;
+}
+.generic-link:hover {
+  transform: scale(1.1);
+}
+
+.is-required {
+  color: #c80000;
+  font-family: 'Poppins', sans-serif;
+}
+
+.error-404-page {
+  background-image: url('../assets//404-background-image.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: transparent;
 }
 
 @media (max-width: 768px) {
-  /* .main-header-link, */
-  .main-header-separator,
+  #main-header-categories {
+    display: none;
+  }
+  .main-header-image {
+    height: 40px;
+  }
+  /* .main-header-separator, */
   .home-category-list {
     display: none;
   }
 
+  .login-container {
+    background-position-x: 50%;
+  }
   .main-container {
     background-position-x: 40%;
   }
-
   .home-search {
     width: 360px;
   }
-
-  .signing-card {
-    width: 90%; /* Reduz a largura do cartão */
-    max-width: 360px; /* Define uma largura máxima para o cartão */
-    height: auto; /* Altura automática para se adaptar ao conteúdo */
-    padding: 15px; /* Reduz o preenchimento do cartão */
+  .signin-card,
+  .login-card {
+    width: 90%;
+    max-width: 360px;
+    height: auto;
+    padding: 15px;
   }
-
-  .signing-form-input {
-    font-size: 16px; /* Aumenta o tamanho da fonte para dispositivos móveis */
+  .signin-form-input,
+  .login-form-input {
+    font-size: 16px;
   }
-
-  .signing-form-button-container {
-    margin-top: 12px; /* Reduz o espaçamento superior do botão */
+  .signin-form-button-container,
+  .login-form-button-container {
+    margin-top: 12px;
   }
-
-  .signing-card-title {
-    font-size: 24px; /* Reduz o tamanho da fonte do título */
+  .signin-card-title,
+  .login-card-title {
+    font-size: 24px;
   }
-
-  .signing-form-label {
-    font-size: 14px; /* Reduz o tamanho da fonte das labels */
+  .signin-form-label,
+  .login-form-label {
+    font-size: 14px;
   }
 }

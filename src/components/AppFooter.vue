@@ -1,11 +1,13 @@
 <template>
-  <router-view />
+  <q-footer class="main-footer">
+    © PartyPro Team – All rights reserved
+  </q-footer>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'App'
+  name: 'AppFooter',
 });
 </script>
