@@ -1,4 +1,4 @@
-<p align="center"><img src="logo.png" width="300"/></p>
+<p align="center"><img src="public/logo.png" width="300"/></p>
 
 # PartyPro Project APP and PWA
 
