@@ -9,8 +9,20 @@ const routes: RouteRecordRaw[] = [
 
   {
     path: '/register',
-    component: () => import('layouts/SigningLayout.vue'),
+    component: () => import('src/layouts/SigninLayout.vue'),
     children: [{ path: '', component: () => import('pages/RegisterPage.vue') }],
+  },
+
+  {
+    path: '/login',
+    component: () => import('src/layouts/LoginLayout.vue'),
+    children: [{ path: '', component: () => import('pages/LoginPage.vue') }],
+  },
+
+  {
+    path: '/forgotPassword',
+    component: () => import('src/layouts/LoginLayout.vue'),
+    children: [{ path: '', component: () => import('pages/ForgotPassPage.vue') }],
   },
 
   {
