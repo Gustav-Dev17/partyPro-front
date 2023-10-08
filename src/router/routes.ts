@@ -22,7 +22,9 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/forgotPassword',
     component: () => import('src/layouts/LoginLayout.vue'),
-    children: [{ path: '', component: () => import('pages/ForgotPassPage.vue') }],
+    children: [
+      { path: '', component: () => import('pages/ForgotPassPage.vue') },
+    ],
   },
 
   {

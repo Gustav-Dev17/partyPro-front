@@ -9,7 +9,7 @@
       </transition>
     </q-page-container>
 
-    <AppFooter />
+    <!-- <AppFooter /> -->
 
   </q-layout>
 </template>
@@ -17,14 +17,14 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import AppHeader from 'components/AppHeader.vue';
-import AppFooter from 'components/AppFooter.vue';
+// import AppFooter from 'components/AppFooter.vue';
 
 
 export default defineComponent({
   name: 'SigninLayout',
   components: {
     AppHeader,
-    AppFooter
+    // AppFooter
   },
 });
 </script>
