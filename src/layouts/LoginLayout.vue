@@ -4,7 +4,7 @@
     <AppHeader />
 
     <q-page-container class="login-container">
-      <transition appear enter-active-class="animated fadeInUp slow" leave-active-class="animated fadeOutDown slow">
+      <transition appear enter-active-class="animated fadeIn slow" leave-active-class="animated fadeOut slow">
         <router-view />
       </transition>
     </q-page-container>

@@ -70,8 +70,8 @@ module.exports = configure(function (/* ctx */) {
       // publicPath: '/',
       // analyze: true,
       env: {
-        API: 'https://partypro-api.onrender.com/'
-        //devAPI: 'http://localhost:3000/'
+        API: 'https://partypro-api.onrender.com/',
+        devAPI: 'http://localhost:3000/'
       },
       // rawDefine: {}
       // ignorePublicFolder: true,
@@ -114,7 +114,7 @@ module.exports = configure(function (/* ctx */) {
       ],
       config: {
         notify: {
-          position: 'bottom-right',
+          position: 'top',
           timeout: 2500
         }
       }

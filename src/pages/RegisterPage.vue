@@ -41,16 +41,15 @@
         <div class="signin-form-group">
           <label class="signin-form-label" for="input_senha">Senha <span class="is-required">*</span></label>
           <input v-model="form.password" type="password" id="input_senha" class="signin-form-input"
-            placeholder="Digite sua senha" min="8" required />
+            placeholder="Digite sua senha" minlength="8" required />
         </div>
 
         <div class="signin-form-group">
           <label class="signin-form-label" for="confirmação_senha">Confirmação de senha <span
               class="is-required">*</span></label>
           <input v-model="confPassword" type="confPassword" id="confirmação_senha" class="signin-form-input"
-            placeholder="Digite a confirmação de senha" min="8" required />
+            placeholder="Digite a confirmação de senha" minlength="8" required />
         </div>
-
 
         <div class="signin-form-box">
           <input v-model="accept" type="checkbox" id="aceitoTermos" class="signin-form-checkbox" />
@@ -77,15 +76,17 @@
 import { api } from 'boot/axios';
 import { useQuasar } from 'quasar';
 import { useRouter } from 'vue-router';
-import { defineComponent, Ref } from 'vue';
+import { defineComponent, onBeforeMount, Ref } from 'vue';
 import { reactive, ref, watch } from 'vue';
 import { FormRegister } from '../types/form.types';
+import { useLoginStore } from '../stores/login-store';
 
 export default defineComponent({
   name: 'RegisterPage',
 
   setup() {
     const router = useRouter();
+    const loginStore = useLoginStore();
     const $q = useQuasar();
     const loading = ref(false);
     const docMask = reactive({ mask: '###.###.###-##', eager: true });
@@ -100,6 +101,12 @@ export default defineComponent({
       id_document_number: '',
       phone: '',
       instagram_url: ''
+    });
+
+    onBeforeMount(() => {
+      if (loginStore.isAuthenticated) {
+        router.push({ path: '/home' });
+      }
     });
 
     watch(() => form.value.id_document_number, (newValue) => {
@@ -128,16 +135,12 @@ export default defineComponent({
       loading.value = true;
 
       api.post('/createOrganiser', form.value)
-        .then(() => {
-          $q.notify({ type: 'positive', message: 'Conta criada com sucesso! Redirecionando...' });
-
-          setTimeout(() => {
-            router.push({ path: '/login' });
-          }, 2000);
-
+        .then((response) => {
+          $q.notify({ type: 'positive', message: response.data.message });
+          setTimeout(() => { router.push({ path: '/login' }); }, 2000);
         })
-        .catch((e) => {
-          $q.notify({ type: 'negative', message: e.response.data.message || e.response.data.error[0] });
+        .catch((error) => {
+          $q.notify({ type: 'negative', message: error.response.data.message });
         })
         .finally(() => {
           loading.value = false;

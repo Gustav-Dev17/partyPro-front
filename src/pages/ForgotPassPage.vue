@@ -27,16 +27,26 @@
 </template>
 
 <script lang="ts">
+import { onBeforeMount, ref } from 'vue'
 import { defineComponent } from 'vue';
-import { ref } from 'vue'
+import { useRouter } from 'vue-router';
+import { useLoginStore } from '../stores/login-store';
 
 export default defineComponent({
   name: 'ForgotPassPage',
 
   setup() {
-
+    const router = useRouter();
+    const loginStore = useLoginStore();
+    
     const email = ref(null);
     const password = ref(null);
+
+    onBeforeMount(() => {
+      if (loginStore.isAuthenticated) {
+        router.push({ path: '/home' });
+      }
+    });
 
     const onSubmit = () => {
       // Aqui você pode acessar os valores dos campos

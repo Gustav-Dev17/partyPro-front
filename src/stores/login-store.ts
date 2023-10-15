@@ -2,14 +2,20 @@ import { defineStore } from 'pinia';
 
 export const useLoginStore = defineStore('login', {
   state: () => ({
-    counter: 0,
+    isAuthenticated: localStorage.getItem('isAuthenticated') === 'true',
+    userToken: localStorage.getItem('userToken'),
   }),
-  getters: {
-    doubleCount: (state) => state.counter * 2,
-  },
   actions: {
-    increment() {
-      this.counter++;
+    userLogin(token: string) {
+      localStorage.setItem('userToken', token);
+      localStorage.setItem('isAuthenticated', 'true');
+      this.isAuthenticated = true;
+    },
+
+    userLogout() {
+      localStorage.removeItem('userToken');
+      localStorage.removeItem('isAuthenticated');
+      this.isAuthenticated = false;
     },
   },
 });

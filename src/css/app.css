@@ -35,6 +35,7 @@
   color: #091c3e;
   display: inline-block;
   padding: 5px 20px;
+  border: none;
   border-radius: 25px;
   font-family: 'Poppins', sans-serif;
   font-weight: 900;
@@ -74,7 +75,7 @@
 }
 
 .main-footer {
-  /* height: 50px; */
+  height: 50px;
   background-color: transparent;
   display: flex;
   justify-content: center;
@@ -85,7 +86,7 @@
 
 /* HOME PAGE */
 
-.home-search {
+.index-search {
   display: flex;
   align-items: center;
   background-color: transparent;
@@ -95,7 +96,7 @@
   margin: 10px;
 }
 
-.home-search-input {
+.index-search-input {
   flex: 1;
   background-color: transparent;
   border: none;
@@ -105,7 +106,7 @@
   font-family: 'Poppins', sans-serif;
 }
 
-.home-search-input::placeholder {
+.index-search-input::placeholder {
   color: white;
   font-weight: 100;
   padding-left: 10px;
@@ -114,7 +115,7 @@
   font-weight: 100;
 }
 
-.home-search-icon {
+.index-search-icon {
   color: white;
   cursor: pointer;
   font-size: 24px;
@@ -122,16 +123,16 @@
   transition: transform 0.3s;
 }
 
-.home-search-icon:hover {
+.index-search-icon:hover {
   transform: scale(1.1);
 }
 
-.home-category-list {
+.index-category-list {
   display: flex;
   justify-content: center;
 }
 
-.home-category-card {
+.index-category-card {
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 5px;
   margin: 10px;
@@ -145,21 +146,21 @@
   cursor: pointer;
   transition: transform 0.3s;
 }
-.home-category-card:hover {
+.index-category-card:hover {
   transform: scale(1.1);
 }
 
-.home-category-card-content {
+.index-category-card-content {
   font-family: 'Poppins', sans-serif;
 }
 
 /* SIGNIN PAGE */
 
 .signin-container {
-  background-image: url('../assets/signin-background-image.jpg');
+  background-image: url('../assets/background-register-image.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: #1c1740;
+  background-color: #000000;
 }
 
 .signin-card-title {
@@ -249,7 +250,7 @@
 /* login PAGE */
 
 .login-container {
-  background-image: url('../assets/login-background-image.jpg');
+  background-image: url('../assets/background-login-image.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #002d5e;
@@ -323,7 +324,7 @@
 .login-form-button {
   border: none;
   color: white;
-  background: linear-gradient(135deg, #ff0084, #00d9ff);
+  background: linear-gradient(135deg, #ff0084, #0095ff);
   border-radius: 15px;
   padding: 8px 30px 8px 30px;
   font-family: 'Poppins', sans-serif;
@@ -336,7 +337,7 @@
 
 .generic-link {
   text-decoration: none;
-  color: #757575;
+  color: #9d9d9d;
   margin-top: 10px;
   transition: transform 0.3s;
   display: flex;
@@ -350,6 +351,17 @@
   color: #c80000;
   font-family: 'Poppins', sans-serif;
 }
+
+/* HOME CONTAINER */
+
+.home-container {
+  background-image: url('../assets/background-home-image.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+/* 404 ERROR PAGE */
 
 .error-404-page {
   background-image: url('../assets//404-background-image.jpg');
@@ -389,17 +401,17 @@
     height: 40px;
   }
   /* .main-header-separator, */
-  .home-category-list {
+  .index-category-list {
     display: none;
   }
 
-  .login-container {
+  .login-container, .home-container {
     background-position-x: 50%;
   }
   .main-container {
     background-position-x: 40%;
   }
-  .home-search {
+  .index-search {
     width: 360px;
   }
   .signin-card,
