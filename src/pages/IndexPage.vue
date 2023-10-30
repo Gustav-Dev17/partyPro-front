@@ -34,6 +34,10 @@ export default defineComponent({
       }
     });
 
+
+
+
+
     const categories = ref([
       { name: 'Shows' },
       { name: 'Baladas' },

@@ -1,4 +1,7 @@
 /* app global css */
+body {
+  font-family: 'Poppins', sans-serif;
+}
 
 .main-header {
   background-color: rgba(0, 0, 0, 0.3);
@@ -6,7 +9,7 @@
   display: flex;
   align-items: center;
   box-shadow: none;
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
 }
 
 .main-header-image {
@@ -32,13 +35,13 @@
 .main-header-entrar-link {
   background-color: white;
   text-decoration: none;
-  color: #091c3e;
+  color: #000000;
   display: inline-block;
   padding: 5px 20px;
   border: none;
   border-radius: 25px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 900;
+  /* font-family: 'Poppins', sans-serif; */
+  font-weight: 500;
   transition: transform 0.3s;
 }
 .main-header-entrar-link:hover {
@@ -52,7 +55,7 @@
   display: inline-block;
   padding: 5px 20px;
   border-radius: 25px;
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
   font-weight: 900;
   transition: transform 0.3s;
 }
@@ -81,7 +84,7 @@
   justify-content: center;
   align-items: center;
   color: white;
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
 }
 
 /* HOME PAGE */
@@ -103,7 +106,7 @@
   color: white;
   outline: none;
   font-size: 16px;
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
 }
 
 .index-search-input::placeholder {
@@ -111,7 +114,7 @@
   font-weight: 100;
   padding-left: 10px;
   font-size: 18px;
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
   font-weight: 100;
 }
 
@@ -151,7 +154,7 @@
 }
 
 .index-category-card-content {
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
 }
 
 /* SIGNIN PAGE */
@@ -165,8 +168,8 @@
 
 .signin-card-title {
   color: #ffffff;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
+  /* font-family: 'Poppins', sans-serif; */
+  font-weight: 500;
   font-size: 30px;
   margin: -15px;
 }
@@ -190,8 +193,8 @@
 
 .signin-form-label {
   color: #6c6c6c;
-  font-family: 'Poppins', sans-serif;
-  font-weight: bold;
+  font-weight: 500 !important;
+  /* font-family: 'Poppins', sans-serif; */
   display: block; /* Para que as labels apareçam embaixo dos campos */
   margin-bottom: 5px; /* Espaçamento entre label e campo */
 }
@@ -203,7 +206,7 @@
   border-radius: 15px 15px 15px 15px;
   padding: 6px 16px;
   font-size: 13px;
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
 }
 
 .signin-form-box {
@@ -239,7 +242,7 @@
   background: linear-gradient(135deg, #ff0084, #ff9c00);
   border-radius: 15px;
   padding: 7px;
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
   transition: transform 0.3s;
 }
 
@@ -258,8 +261,8 @@
 
 .login-card-title {
   color: black;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
+  /* font-family: 'Poppins', sans-serif; */
+  font-weight: 500;
   font-size: 30px;
   margin: 0;
   display: flex;
@@ -297,8 +300,8 @@
 
 .login-form-label {
   color: #6c6c6c;
-  font-family: 'Poppins', sans-serif;
-  font-weight: bold;
+  /* font-family: 'Poppins', sans-serif; */
+  font-weight: 500 !important;
   display: block; /* Para que as labels apareçam embaixo dos campos */
   margin-bottom: 5px; /* Espaçamento entre label e campo */
 }
@@ -310,7 +313,7 @@
   border-radius: 15px 15px 15px 15px;
   padding: 6px 16px;
   font-size: 13px;
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
 }
 
 .login-form-button-container {
@@ -327,7 +330,7 @@
   background: linear-gradient(135deg, #ff0084, #0095ff);
   border-radius: 15px;
   padding: 8px 30px 8px 30px;
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
   margin-top: 15px;
   transition: transform 0.3s;
 }
@@ -349,7 +352,7 @@
 
 .is-required {
   color: #c80000;
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
 }
 
 /* HOME CONTAINER */
@@ -358,7 +361,220 @@
   background-image: url('../assets/background-home-image.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: transparent;
+  background-color: black;
+}
+
+/* ACCOUNT PAGE */
+.account-container {
+  box-sizing: border-box;
+  position: absolute;
+  width: 1054px;
+  height: 662px;
+}
+
+.account-box-full {
+  box-sizing: border-box;
+  position: absolute;
+  background: rgba(26, 26, 26, 0.64);
+  backdrop-filter: blur(5px);
+  border-radius: 30px 30px 30px 30px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.account-box-full-account-pic-box {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 38%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.account-box-full-account-pic-ellipse {
+  position: absolute;
+  width: 175px;
+  height: 175px;
+  background: #535353;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.account-box-full-account-pic-ellipse-icon {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+}
+
+.account-box-full-account-info {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 25%; /* Iniciar a partir do final da primeira div filha */
+  width: 75%; /* Ocupa o restante da largura da div pai */
+  height: 38%; /* A mesma altura da primeira div filha */
+  display: flex;
+  flex-direction: column; /* Coloca as divs filhas uma abaixo da outra */
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
+}
+
+.account-box-full-account-info-name {
+  min-height: 5rem;
+  min-width: 1rem;
+  width: 100%;
+  font-weight: 600;
+  /* font-family: 'Poppins', sans-serif; */
+  color: white;
+  text-align: left;
+  margin: 0;
+  margin-bottom: 5px;
+  white-space: nowrap; /* Impede a quebra de linha */
+  overflow: hidden; /* Oculta o texto que extrapolar a div */
+  text-overflow: ellipsis; /* Adiciona reticências (...) quando o texto é cortado */
+  font-size: 60px; /* Tamanho de fonte inicial */
+
+  /* Tamanho de fonte responsivo */
+  @media screen and (max-width: 768px) {
+    font-size: 40px;
+  }
+}
+
+.account-box-full-account-info-email {
+  min-height: 1rem;
+  min-width: 10rem;
+  font-size: 20px;
+  width: 100%;
+  /* font-family: 'Poppins', sans-serif; */
+  color: white;
+  text-align: left; /* Alinha o texto à esquerda */
+  margin: 0; /* Remove margens padrão para ajustar a esquerda */
+}
+
+.account-box-full-account-info-name.animated-gradient {
+  animation: gradientAnimation 0.6s linear infinite;
+}
+.account-box-full-account-info-email.animated-gradient {
+  animation: gradientAnimation 0.7s linear infinite;
+}
+
+.account-box-half-container-editable-data-value.animated-gradient {
+  animation: gradientAnimation 0.6s linear infinite;
+}
+
+.account-box-half {
+  box-sizing: border-box;
+  position: absolute;
+  background: rgba(44, 44, 44, 0.77);
+  backdrop-filter: blur(5px);
+  border-radius: 0px 0px 30px 30px;
+  top: 40%;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  display: flex;
+  overflow-y: auto;
+}
+
+.account-box-half-container {
+  flex: 1;
+  height: 100%;
+}
+
+.account-box-half-container-editable-data {
+  margin: 50px 50px 0px 50px;
+}
+
+.account-box-half-container-editable-data-title {
+  min-height: 1rem;
+  min-width: 10rem;
+  font-size: 35px;
+  width: 100%;
+  font-weight: 700;
+  /* font-family: 'Poppins', sans-serif; */
+  color: white;
+  text-align: left;
+  margin: 0;
+}
+
+.account-box-half-container-editable-data-subtitle {
+  min-height: 1rem;
+  min-width: 10rem;
+  font-size: 20px;
+  width: 100%;
+  font-weight: 700;
+  /* font-family: 'Poppins', sans-serif; */
+  color: white;
+  text-align: left;
+  margin: 0;
+  margin-top: 5px;
+}
+
+.account-box-half-container-editable-data-value {
+  min-height: 1rem;
+  min-width: 10rem;
+  font-size: 15px;
+  width: 100%;
+  /* font-family: 'Poppins', sans-serif; */
+  color: white;
+  text-align: left;
+  margin: 0;
+}
+
+.account-box-separator {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.account-box-half-container-options {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -20px;
+}
+
+.account-box-half-container-options-group {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  margin-bottom: 15px;
+}
+
+/* Rectangle 81 */
+.account-box-half-container-options-group-btn {
+  width: 45px;
+  height: 47px;
+  background: #4a4a4a;
+  border-radius: 15px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s;
+}
+
+.account-box-half-container-options-group-description {
+  margin-left: 15px;
+  /* font-family: 'Poppins', sans-serif; */
+  font-weight: 700;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+.account-box-half-container-options-group-btn:hover {
+  transform: scale(1.1);
 }
 
 /* 404 ERROR PAGE */
@@ -405,7 +621,10 @@
     display: none;
   }
 
-  .login-container, .home-container {
+  .login-container {
+    background-position-x: 50%;
+  }
+  .home-container {
     background-position-x: 50%;
   }
   .main-container {
@@ -436,5 +655,82 @@
   .signin-form-label,
   .login-form-label {
     font-size: 14px;
+  }
+
+  .account-container {
+    width: 95%;
+    height: 85%;
+  }
+
+  .account-box-full-account-pic-ellipse {
+    width: 100px;
+    height: 100px;
+    margin-left: 35px;
+  }
+
+  .account-box-full-account-info-name {
+    min-height: 1rem;
+    font-size: 25px;
+    margin-left: 14px;
+  }
+
+  .account-box-full-account-info-email {
+    min-height: 1rem;
+    font-size: 15px;
+    margin-left: 14px;
+  }
+
+  .account-box-half {
+    flex-direction: column; /* Coloca as divs filhas uma abaixo da outra */
+  }
+  .account-box-half-container {
+    flex: 0 0 70%; /* Ocupa toda a largura da div mãe */
+  }
+
+  .account-box-half-container-editable-data-title {
+    font-size: 22px;
+  }
+
+  .account-box-half-container-editable-data-subtitle {
+    font-size: 17px;
+  }
+
+  .account-box-half-container-editable-data-value {
+    font-size: 13px;
+  }
+
+  .account-box-half-container-options {
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 40px;
+  }
+
+  .account-box-half-container-options-group {
+    width: 100%;
+  }
+}
+
+@keyframes gradientAnimation {
+  0% {
+    margin-top: 2px;
+    margin-right: 2px;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0),
+      rgba(243, 243, 243, 1)
+    );
+    background-size: 200% 100%;
+    background-position: 100% 0;
+  }
+  100% {
+    margin-top: 2px;
+    margin-right: 2px;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0),
+      rgba(243, 243, 243, 0.5)
+    );
+    background-size: 200% 100%;
+    background-position: -100% 0;
   }
 }

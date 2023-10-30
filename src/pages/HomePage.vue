@@ -9,7 +9,7 @@
 <script lang="ts">
 import { useRouter } from 'vue-router';
 import { useLoginStore } from '../stores/login-store';
-import { defineComponent, onBeforeMount, ref } from 'vue';
+import { defineComponent, onBeforeMount } from 'vue';
 
 export default defineComponent({
   name: 'HomePage',

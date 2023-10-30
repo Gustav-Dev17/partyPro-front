@@ -11,7 +11,8 @@
       <router-link v-if="!isRegisterRoute && !isAuthenticated" class="main-header-link"
         to="/register">Registrar-se</router-link>
 
-      <router-link v-if="isAuthenticated" class="main-header-link" to="/home">Home</router-link>
+      <router-link v-if="isAuthenticated && isAccountRoute" class="main-header-link" to="/home">Início</router-link>
+      <router-link v-if="isAuthenticated && !isAccountRoute" class="main-header-link" to="/account">Minha conta</router-link>
 
       <div v-if="!isLoginRoute && !isRegisterRoute" class="main-header-separator"></div>
 
@@ -37,6 +38,7 @@ export default defineComponent({
     const loginStore = useLoginStore();
     const isLoginRoute = computed(() => route.path === '/login');
     const isRegisterRoute = computed(() => route.path === '/register');
+    const isAccountRoute = computed(() => route.path === '/account');
     const isAuthenticated = computed(() => loginStore.isAuthenticated);
 
     const onLogout = () => {
@@ -47,6 +49,7 @@ export default defineComponent({
     return {
       isRegisterRoute,
       isLoginRoute,
+      isAccountRoute,
       isAuthenticated,
       onLogout
     };

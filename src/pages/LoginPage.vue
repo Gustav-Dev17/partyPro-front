@@ -25,7 +25,7 @@
         <div class="login-form-button-container">
           <button class="login-form-button" label="Submit" type="submit" :disabled="loading">
             <span v-if="loading" class="loading-spinner"></span>
-            {{ loading ? 'Aguarde...' : 'Login' }}
+            {{ loading ? '&nbsp;Aguarde...' : 'Login' }}
           </button>
         </div>
 
@@ -79,7 +79,6 @@ export default defineComponent({
       api.post('/login', form.value)
         .then((response) => {
           loginStore.userLogin(response.data.token);
-          $q.notify({ type: 'positive', message: response.data.message });
           router.push({ path: '/home' });
         })
         .catch((error) => {

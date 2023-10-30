@@ -18,7 +18,7 @@ import { defineComponent } from 'vue';
 import AppHeader from 'components/AppHeader.vue';
 
 export default defineComponent({
-  name: 'HomeLayout',
+  name: 'AppLayout',
   components: {
     AppHeader
   },

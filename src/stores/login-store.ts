@@ -10,12 +10,14 @@ export const useLoginStore = defineStore('login', {
       localStorage.setItem('userToken', token);
       localStorage.setItem('isAuthenticated', 'true');
       this.isAuthenticated = true;
+      this.userToken = token;
     },
 
     userLogout() {
       localStorage.removeItem('userToken');
       localStorage.removeItem('isAuthenticated');
       this.isAuthenticated = false;
+      this.userToken = null;
     },
   },
 });
