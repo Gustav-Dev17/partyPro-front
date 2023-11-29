@@ -18,6 +18,8 @@
 </template>
 
 <script lang="ts">
+import { api } from 'boot/axios';
+import { useQuasar } from 'quasar';
 import { useRouter } from 'vue-router';
 import { useLoginStore } from '../stores/login-store';
 import { defineComponent, onBeforeMount, ref } from 'vue';
@@ -25,27 +27,33 @@ import { defineComponent, onBeforeMount, ref } from 'vue';
 export default defineComponent({
   name: 'IndexPage',
   setup() {
+    const $q = useQuasar();
     const router = useRouter();
     const loginStore = useLoginStore();
+    const categories = ref([] as {id: string, name: string}[]);
 
     onBeforeMount(() => {
-      if (loginStore.isAuthenticated) {
+      if  (loginStore.isAuthenticated) {
         router.push({ path: '/home' });
       }
+      GetCategories();
     });
 
+    const GetCategories = () => {
+      api.get('/getCategories')
+        .then((response) => {
+         categories.value = response.data;
+        })
+        .catch((error) => {
+          $q.notify({ type: 'negative', message: error.response.data.message });
+        })
+      }
+        
 
 
 
 
-    const categories = ref([
-      { name: 'Shows' },
-      { name: 'Baladas' },
-      { name: 'Discoteca' },
-      { name: 'Open bar' },
-      { name: 'Raves' }
-    ]);
-
+   
     return {
       categories,
     };

@@ -129,17 +129,32 @@ body {
 .index-search-icon:hover {
   transform: scale(1.1);
 }
-
 .index-category-list {
   display: flex;
   justify-content: center;
+  width: 620px;
+  overflow-x: auto;
+}
+
+.index-category-list::-webkit-scrollbar {
+  width: 6px; 
+}
+
+.index-category-list::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3); /* Cor e transparência da "thumb" da barra de rolagem */
+  border-radius: 6px;
+  max-height: 10px;
+}
+
+.index-category-list::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.0); /* Cor e transparência do fundo da barra de rolagem */
 }
 
 .index-category-card {
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 5px;
   margin: 10px;
-  width: 100px;
+  min-width: 100px; /* Largura mínima do cartão */
   height: 25px;
   display: flex;
   align-items: center;
@@ -147,17 +162,22 @@ body {
   color: white;
   font-size: 11px;
   cursor: pointer;
-  transition: transform 0.3s;
+  transition: width 0.3s, transform 0.3s; /* Adicionando transição para width e transform */
+  flex-shrink: 0;
+  overflow: hidden;
+  white-space: nowrap;
 }
+
 .index-category-card:hover {
-  transform: scale(1.1);
+  width: auto; /* Aumenta a largura automaticamente ao passar o mouse */
+  transform: scale(1.1); /* Aumenta um pouco o tamanho ao passar o mouse */
 }
 
 .index-category-card-content {
-  /* font-family: 'Poppins', sans-serif; */
+  padding: 0 8px; /* Adiciona margem interna (espaço) à esquerda e à direita */
+  overflow: hidden;
+  white-space: nowrap;
 }
-
-/* SIGNIN PAGE */
 
 .signin-container {
   background-image: url('../assets/background-register-image.jpg');
@@ -618,7 +638,7 @@ body {
   }
   /* .main-header-separator, */
   .index-category-list {
-    display: none;
+    width: 360px;
   }
 
   .login-container {
